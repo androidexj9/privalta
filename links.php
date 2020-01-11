@@ -14,9 +14,10 @@ if (!isset($_SESSION['loggedin'])) {
 		<h1>Links</h1>
 	</header>
 
-	<h2 id="administracion">Administraci&oacute;n</h2>
-	<img src="public/img/icon_whatsApp.png" width="16px"/> WhatsApp: +52 1 55 6871 2688<br>
-	Correo: <a href="maito:privalta@adman.com">privalta@adman.com</a>
+	<h2 id="administracion">Administraci&oacute;n Adymi</h2>
+	<!--<img src="public/img/icon_whatsApp.png" width="16px"/> WhatsApp: +52 1 55 6871 2688<br>-->
+	Correo: <a href="maito:contacto@adymidemexico.com">contacto@adymidemexico.com</a><br>
+	Sitio Web <a href="https://www.adymidemexico.com">https://www.adymidemexico.com</a><br><br>
 
 	<h2 id="comite">Comit&eacute;</h2>
 	<img src="public/img/icon_whatsApp.png" width="16px"/> Grupo WhatsApp: <a href="https://chat.whatsapp.com/LPYJKHs5GIEEup3zqDCRg3">Comunicados Nuevo Comit&eacute;</a><br>

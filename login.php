@@ -30,13 +30,13 @@ if (!isset($_POST['correo'], $_POST['password'])) {
 
 <?php
 // Prepare our SQL, preparing the SQL statement will prevent SQL injection.
-if ($stmt = $con->prepare("SELECT `ID_USUARIO`, `ID_CAT_ROL`, `CORREO`, `NOMBRE`, `AP_PATERNO`, `AP_MATERNO`, `PASSWORD` FROM `USUARIO` WHERE `CORREO` = ? AND `ID_CAT_ROL` = ? AND `STATUS` = ?")) {
+if ($stmt = $con->prepare("SELECT `ID_USUARIO`, `ID_CAT_ROL`, `CORREO`, `NOMBRE`, `AP_PATERNO`, `AP_MATERNO`, `PASSWORD` FROM `USUARIO` WHERE `CORREO` = ? AND `STATUS` = ?")) {
 
 	// Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
 	$p_correo = $_POST['correo'];
-	$p_rol = 2;
+	//$p_rol = 2;
 	$p_status = 1;
-	$stmt->bind_param('sii', $p_correo, $p_rol, $p_status);
+	$stmt->bind_param('si', $p_correo, $p_status);
 	$stmt->execute();
 	// Store the result so we can check if the account exists in the database.
 	$stmt->store_result();

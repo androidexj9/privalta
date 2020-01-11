@@ -8,6 +8,12 @@ if (!isset($_SESSION['loggedin'])) {
 
 <?php require_once("header.php"); ?>
 
+<script>
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+</script>
+
 <!-- Content -->
 <section>
 	<header class="main">
@@ -111,27 +117,30 @@ if (!isset($_SESSION['loggedin'])) {
 
 	<hr class="major" />
 
-	<h2 id="	">Contrataci&oacute;n de SALONES</h2>
+	<h2 id="procedimiento_salones">Contrataci&oacute;n de SALONES</h2>
 	<p>PROCEDIMIENTO PARA LA RESERVACION DEL USO DE SALONES DE EVENTOS SOCIALES PRIVALTA<br>
 	CAFETAL (SALON 1) Y AZAFRAN (SALON 2)
 	<h2 style="color: red">Recuerda vecin@ que los pagos en efectivo solo se permiten para Devoluciones de Salones.</h2>
 
 	Pasos:<br>
-	1.- Entrar a la siguiente liga: <a href="www.casandra.com.mx/index.aspx" target="_blank">www.casandra.com.mx/index.aspx</a><br>
+	<!--1.- Entrar a la siguiente liga: <a href="www.casandra.com.mx/index.aspx" target="_blank">www.casandra.com.mx/index.aspx</a><br>
 	2.- En el men&uacute;, dar clic en servicios y se desplegar&aacute; el icono de reservaciones.<br>
-	3.- Elegir el sal&oacute;n de su preferencia y reservarlo.<br>
-	
-	4.- Una vez hecha la reservaci&oacute;n, se cuenta con hasta 7 d&iacute;as h&aacute;biles para realizar el dep&oacute;sito a la <b>cuenta del condominio</b> de la cuota de recuperaci&oacute;n. Posteriormente mandar el comprobante al correo del comité de vigilancia: <a href="mailto:comite@privalta.mx">comite@privalta.mx</a>, De no realizar el depósito en dicho plazo, se proceder&aacute; a la cancelaci&oacute;n de la reservac&oacute;n.<br>
-	
-	5.- 7 d&iacute;as h&aacute;biles antes del evento se tendr&aacute; que acudir a administraci&oacute;n a entregar el dep&oacute;sito en garant&iacute;a en <b>efectivo</b>, para que esta lo resguarde en su caja chica.<br>
-	
-	6.- Si el cond&oacute;mino desea cancelar la reservaci&oacute;n del evento, tendr&aacute; hasta esta fecha, de lo contrario la penalizaci&oacute;n ser&aacute; la cuota de recuperaci&oacute;n.<br>
+	3.- Elegir el sal&oacute;n de su preferencia y reservarlo.<br>-->
 
-	7.- El d&iacute;a del evento, el personal de <b>Administraci&oacute;n</b> y/o <b>Vigilancia</b> abrir&aacute; el sal&oacute;n; y el cond&oacute;mino tendr&aacute; que verificar que se entrega en optimas condiciones. De no ser as&iacute; deber&aacute; reportarlo inmediatamente a la <b>Administraci&oacute;n</b>.<br><br>
-
-	8.- Una vez terminado el evento, se deber&aacute; entregar limpio y sin daño alguno en sus instalaciones; Lo recibir&aacute; <b>Administraci&oacute;n</b> y/o <b>Comit&eacute; de Vigilancia</b> apoyados en su <b>Mesa de trabajo</b>, a m&aacute;s tardar a las 9 am del d&iacute;a siguiente del evento.<br>
+	1.- Entrar a la siguiente liga: <a href="https://calendar.google.com/calendar/b/3?cid=MWVub3JhMXRyc21wZXBidWZmaTk5M2QzODBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ" target="_blank">Google Calendar</a><br>
+	2.- Identificar la disponibilidad del sal&oacute;n de su preferencia y reservarlo, enviando un mensaje por correo al correo del comité de vigilancia: <a href="mailto:comite@privalta.mx">comite@privalta.mx</a> y/o Administraci&oacute;n.<br>
 	
-	9.- Si todo esta en orden, <b>Administraci&oacute;n</b> entregar&aacute; el dep&oacute;sito en garant&iacute;a en efectivo. De no ser as&iacute; se someter&aacute; a evaluaci&oacute;n de la misma, la cantidad requerida para solucionar el desperfecto.<br><br>
+	3.- Una vez hecha la reservaci&oacute;n, se cuenta con hasta 7 d&iacute;as h&aacute;biles para realizar el dep&oacute;sito a la <b>cuenta del condominio</b> de la cuota de recuperaci&oacute;n. Posteriormente mandar el comprobante al correo del comité de vigilancia: <a href="mailto:comite@privalta.mx">comite@privalta.mx</a>, De no realizar el depósito en dicho plazo, se proceder&aacute; a la cancelaci&oacute;n de la reservac&oacute;n.<br>
+	
+	4.- 7 d&iacute;as h&aacute;biles antes del evento se tendr&aacute; que acudir a administraci&oacute;n a entregar el dep&oacute;sito en garant&iacute;a en <b>efectivo</b>, para que esta lo resguarde en su caja chica.<br>
+	
+	5.- Si el cond&oacute;mino desea cancelar la reservaci&oacute;n del evento, tendr&aacute; hasta esta fecha, de lo contrario la penalizaci&oacute;n ser&aacute; la cuota de recuperaci&oacute;n.<br>
+
+	6.- El d&iacute;a del evento, el personal de <b>Administraci&oacute;n</b> y/o <b>Vigilancia</b> abrir&aacute; el sal&oacute;n; y el cond&oacute;mino tendr&aacute; que verificar que se entrega en optimas condiciones. De no ser as&iacute; deber&aacute; reportarlo inmediatamente a la <b>Administraci&oacute;n</b>.<br><br>
+
+	7.- Una vez terminado el evento, se deber&aacute; entregar limpio y sin daño alguno en sus instalaciones; Lo recibir&aacute; <b>Administraci&oacute;n</b> y/o <b>Comit&eacute; de Vigilancia</b> apoyados en su <b>Mesa de trabajo</b>, a m&aacute;s tardar a las 9 am del d&iacute;a siguiente del evento.<br>
+	
+	8.- Si todo esta en orden, <b>Administraci&oacute;n</b> entregar&aacute; el dep&oacute;sito en garant&iacute;a en efectivo. De no ser as&iacute; se someter&aacute; a evaluaci&oacute;n de la misma, la cantidad requerida para solucionar el desperfecto.<br><br>
 
 	Banco: SANTANDER<br>
 	Titular: Oscar Adolfo S&aacute;nchez Rosas<br>
@@ -158,6 +167,9 @@ if (!isset($_SESSION['loggedin'])) {
 			<td>$250.00 M.N</td>
 		</tr>
 	</table>
+
+	<br>
+	<iframe src="https://calendar.google.com/calendar/b/3/embed?height=500&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FMexico_City&amp;src=Y29taXRlcHJpdmFsdGFAZ21haWwuY29t&amp;src=MWVub3JhMXRyc21wZXBidWZmaTk5M2QzODBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZXMudXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%2322AA99&amp;color=%239F3501&amp;color=%231F753C&amp;title=Calendario%20PRIVALTA&amp;showNav=1&amp;showTz=0" style="border:solid 1px #777" width="100%" height="500" frameborder="0" scrolling="no"></iframe>
 </section>
 <!-- Content -->
 

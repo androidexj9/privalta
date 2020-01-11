@@ -96,8 +96,13 @@ $result_egresos = mysqli_query($con, "SELECT E.ID_EGRESO, E.ID_CAT_TIPO_EGRESO, 
 
 		<h3>Vigilancia</h3>
 		<p>
-			Raz&oacute;n social: Seguridad Privada / Martha Yuridia Crespo Munguía<br>
+			<!--Raz&oacute;n social: Seguridad Privada / Martha Yuridia Crespo Munguía<br>
 			Inicio de Contrato: 1 de enero 2020 (Per&iacute;odo de Prueba)<br>
+			Fin de Contrato: (pendiente)<br>
+			Pago Mensual: $45,000.00 M.N-->
+
+			Raz&oacute;n social: Guardias MX / Emerson Nava Cano<br>
+			Inicio de Contrato: 15 de diciembre 2019 (Per&iacute;odo de Prueba)<br>
 			Fin de Contrato: (pendiente)<br>
 			Pago Mensual: $45,000.00 M.N
 		</p>
@@ -192,6 +197,16 @@ $result_egresos = mysqli_query($con, "SELECT E.ID_EGRESO, E.ID_CAT_TIPO_EGRESO, 
 				<!--<td><font size="3" color="gray">PENDIENTE</font></td>-->
 				<td><font size="3" color="green">ACTIVO</font></td>
 				<td><a href="public/documents/estados/pdf/201910.pdf" target="_blank">PDF</a></td>
+			</tr>
+			<tr>
+				<td>01/11/2019 - 30/11/2019</td>
+				<td><font size="3" color="green">ACTIVO</font></td>
+				<td><a href="public/documents/estados/pdf/201911.pdf" target="_blank">PDF</a></td>
+			</tr>
+			<tr>
+				<td>01/12/2019 - 31/12/2019</td>
+				<td><font size="3" color="green">ACTIVO</font></td>
+				<td><a href="public/documents/estados/pdf/201912.pdf" target="_blank">PDF</a></td>
 			</tr>
 		</table>
 	</div>

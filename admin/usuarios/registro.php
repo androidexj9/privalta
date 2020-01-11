@@ -29,22 +29,20 @@ $p_ap_materno = utf8_decode($_POST['ap_materno']);
 $p_password = password_hash($_POST['password'], PASSWORD_BCRYPT);
 
 // Insertar Registro
-$stmt = $conn->prepare("INSERT INTO `USUARIO` (`ID_USUARIO`, `ID_CAT_ROL`, `CORREO`, `NOMBRE`, `AP_PATERNO`, `AP_MATERNO`, `PASSWORD`, `STATUS`) VALUES ('', 2, ?, ?, ?, ?, ?, 0)");
+/*$stmt = $conn->prepare("INSERT INTO `USUARIO` (`ID_USUARIO`, `ID_CAT_ROL`, `CORREO`, `NOMBRE`, `AP_PATERNO`, `AP_MATERNO`, `PASSWORD`, `STATUS`) VALUES ('', 2, ?, ?, ?, ?, ?, 0)");
 $stmt->bind_param('sssss', $p_correo, $p_nombre, $p_ap_paterno, $p_ap_materno, $p_password);
-$stmt->execute();
+$stmt->execute();*/
 
-/*$result = $stmt->get_result();
-while ($row = $result->fetch_assoc()) {
-    // Do something with $row
-}*/
+$sql = "INSERT INTO `USUARIO` (`ID_USUARIO`, `ID_CAT_ROL`, `CORREO`, `NOMBRE`, `AP_PATERNO`, `AP_MATERNO`, `PASSWORD`, `STATUS`) VALUES (NULL, '2', '".$p_correo."', '".$p_nombre."', '".$p_ap_paterno."', '".$p_ap_materno."', '".$p_password."', '0')";
 
-/*if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+if ($conn->query($sql) === TRUE) {
+    echo "Record inserted successfully";
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}*/
+    echo "Error on insert record: " . $conn->error;
+}
 
-header('Refresh: 2; URL = ../admon_usuarios.php');
+//header('Refresh: 2; URL = ../admon_usuarios.php');
+echo '<script>location.replace("../admon_usuarios.php")</script>';
 
 $conn->close();
 

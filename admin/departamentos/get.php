@@ -31,7 +31,7 @@ header("Content-Type: application/json;charset=utf-8");
 echo json_encode(array(
 	'ID_DEPARTAMENTO' => $departamento['ID_DEPARTAMENTO'],
 	'ID_USUARIO' => $departamento['ID_USUARIO'],
-	'FECHA_ENTREGA' => $departamento['FECHA_ENTREGA'],
+	'FECHA_ENTREGA' => $departamento['FECHA_ENTREGA'] == null ? '' : $departamento['FECHA_ENTREGA'],
     'STATUS' => $departamento['STATUS']
 	)
 );

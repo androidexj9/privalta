@@ -17,7 +17,7 @@ if (mysqli_connect_errno()) {
 	echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-$result_usuarios = mysqli_query($con, "SELECT * FROM USUARIO WHERE USUARIO.ID_CAT_ROL=2 AND STATUS=1 ORDER BY NOMBRE ASC");
+$result_usuarios = mysqli_query($con, "SELECT * FROM USUARIO WHERE USUARIO.ID_CAT_ROL=2 AND STATUS=1 ORDER BY ID_USUARIO ASC");
 
 $result_departamentos = mysqli_query($con, "SELECT * FROM CAT_DEPARTAMENTO ORDER BY ID_DEPARTAMENTO ASC");
 ?>
@@ -122,7 +122,7 @@ $(document).ready(function() {
 							<option value="">- Seleccione -</option>
 							<?php
 								while($valores = mysqli_fetch_array($result_usuarios)){
-									echo "<option value='".$valores['ID_USUARIO']."'>".utf8_encode($valores['AP_PATERNO'])." ".utf8_encode($valores['AP_MATERNO'])." ".utf8_encode($valores['NOMBRE'])."</option>";
+									echo "<option value='".$valores['ID_USUARIO']."'>".utf8_encode($valores['CORREO'])." - ".utf8_encode($valores['AP_PATERNO'])." ".utf8_encode($valores['AP_MATERNO'])." ".utf8_encode($valores['NOMBRE'])."</option>";
 								}
 							?>
 						</select>
@@ -131,10 +131,31 @@ $(document).ready(function() {
 							<option value="1">1 - ENTREGADO</option>
 							<option value="0">0 - NO ENTREGADO</option>
 						</select><br>
-						<button type="submit">Actualizar Departmaneto</button>
+						<button type="submit">Actualizar Departamento</button>
 					</form>
 				</div>
-				
+
+				<hr class="major" />
+
+				<div id="correo">
+					<h2>Ejemplo Correo</h2>
+					Buen día <b>NOMBRE CONDÓMINO</b>;<br>
+					Bienvenid@s a Plataforma PRIVALTA.<br><br>
+
+					Estos son tus datos de acceso:<br>
+					Usuario: <b>CORREO CONDÓMINO</b><br>
+					Password: welcome<br><br>
+
+					Puedes cambiar tu contraseña con estos pasos.<br><br>
+
+					1.- Accesa a http://www.privalta.mx/index.php<br>
+					2.- Selecciona la opcion "Mi Cuenta"<br>
+					3.- Ingresa tu nueva contraseña y da click en el botón "Actualizar".<br><br>
+
+					--<br>
+					Saludos.<br>
+					Comité PRIVALTA
+				</div>
 			</div>
 		</section>
 		<!-- Banner Bienvenida -->

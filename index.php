@@ -42,6 +42,7 @@ $(function() {
 
 			<div id="slides">
 		      	<img src="public/img/banners/bienvenida.jpg" title="Bienvenid@s" width="100%">
+		      	<!--<img src="public/img/banners/navidad.jpg" title="Felices Fiestas" width="100%">-->
 
 		      	<a href="avisos.php#clases_gym">
 		      		<img src="public/img/banners/clases.jpg" title="Clases de Muestra - GYM 8:00 p.m" width="100%">

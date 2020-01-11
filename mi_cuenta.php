@@ -80,6 +80,7 @@ $result_cuotas = mysqli_query($con, "SELECT * FROM CUOTAS WHERE ID_USUARIO=". $I
 
 	<hr class="major" />
 
+	<?php if ($_SESSION['user_rol'] == 2) { ?>
 	<h2>Registrar Cuota de Mantenimiento - <?= $MONTH_ES . " " . $YEAR ?></h2>
 	<!--<img src="public/img/alert.png" width="32px" />-->
 	<h3 style="color: red">Recuerda vecin@ que los pagos de las Cuotas de Mantenimiento no se permiten en efectivo.</h3>
@@ -141,6 +142,7 @@ $result_cuotas = mysqli_query($con, "SELECT * FROM CUOTAS WHERE ID_USUARIO=". $I
 			echo "</tr>";
 		} ?>
 	</table>
+	<?php } ?>
 
 	<hr class="major" />
 </section>

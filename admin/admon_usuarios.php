@@ -223,7 +223,7 @@ $result_usuarios = mysqli_query($con, "SELECT * FROM USUARIO WHERE USUARIO.ID_CA
 <script>
 	$.validate({
 		lang: 'es',
-		modules : 'security',
+		/*modules : 'security',
 			onModulesLoaded : function() {
 				var optionalConfig = {
 					fontSize: '12pt',
@@ -233,8 +233,8 @@ $result_usuarios = mysqli_query($con, "SELECT * FROM USUARIO WHERE USUARIO.ID_CA
 					good : 'Good',
 					strong : 'Strong'
 				};
-			//$('input[name="password"]').displayPasswordStrength(optionalConfig);
-		}
+			$('input[name="password"]').displayPasswordStrength(optionalConfig);
+		}*/
 	});
 </script>
 <?php require_once("footer.php"); ?>
