@@ -39,7 +39,7 @@ $a[9] = "septiembre";
 $a[10] = "octubre";
 $a[11] = "noviembre";
 $a[12] = "diciembre";
-$MONTH_ES = $a[date('m')];
+$MONTH_ES = $a[date('n')];
 
 $status = ["<font color='red'>NO PAGADO</font>", "<font color='green'>PAGADO</font>", "<font color='gray'>PENDIENTE</font>"];
 
